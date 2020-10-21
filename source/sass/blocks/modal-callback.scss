@@ -1,0 +1,75 @@
+.modal-callback__content {
+  position: relative;
+  width: 490px;
+  height: 605px;
+  margin: auto;
+  padding: 29px 39px;
+  background-color: $color_blue;
+}
+
+.modal-callback form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal-callback__title {
+  margin: 0;
+  margin-bottom: 13px;
+  font-family: $font_family_title;
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.modal-callback__tagline {
+  margin: 0;
+  margin-bottom: 35px;
+  padding-right: 10px;
+  line-height: 21px;
+}
+
+.modal-callback__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: $color_text;
+  transition: all 0.2s $transition_timing;
+
+  &:hover,
+  &:focus {
+    color: $color_hover_secondary;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.modal-callback__close svg {
+  fill: currentColor;
+}
+
+.modal-callback input,
+.modal-callback textarea {
+  padding: 15px 24px;
+}
+
+.modal-callback input {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.modal-callback textarea {
+  min-height: 104px;
+  margin-bottom: 32px;
+}
+
+.modal-callback .form__button {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 13px 80px;
+}
+
+.modal-callback .form__label--privacy {
+  max-width: 375px;
+  padding-left: 50px;
+}

@@ -1,0 +1,45 @@
+.header {
+  background-color: $color_blue_dark;
+  background-image: url("../img/index-background-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  overflow: hidden;
+
+  @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
+    background-image: url("../img/index-background-desktop@2x.png");
+  }
+}
+
+.header__navigation {
+  margin-bottom: 235px;
+}
+
+@media (max-width: $tablet_width) {
+  .header {
+    background-image: url("../img/index-background-tablet@1x.png");
+
+    @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
+      background-image: url("../img/index-background-tablet@2x.png");
+    }
+  }
+
+  .header__navigation {
+    margin-bottom: 112px;
+  }
+}
+
+@media (max-width: $mobile_width) {
+  .header {
+    background-image: url("../img/index-background-mobile@1x.png");
+
+    @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
+      background-image: url("../img/index-background-mobile@2x.png");
+    }
+  }
+
+  .header__navigation {
+    margin-bottom: 231px;
+    padding: 0 15px;
+  }
+}

@@ -1,3 +1,22 @@
-h1 {
-  color: blue;
-}
+@import "variables.scss";
+@import "fonts.scss";
+@import "layout.scss";
+@import "page.scss";
+@import "blocks/visually-hidden.scss";
+@import "blocks/button.scss";
+@import "blocks/form.scss";
+@import "blocks/header.scss";
+@import "blocks/logo.scss";
+@import "blocks/navigation.scss";
+@import "blocks/navigation-contacts.scss";
+@import "blocks/banner.scss";
+@import "blocks/advantages.scss";
+@import "blocks/about.scss";
+@import "blocks/products.scss";
+@import "blocks/products-card.scss";
+@import "blocks/feedback.scss";
+@import "blocks/footer.scss";
+@import "blocks/social.scss";
+@import "blocks/copyright.scss";
+@import "blocks/modal.scss";
+@import "blocks/modal-callback.scss";

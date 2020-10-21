@@ -1,0 +1,177 @@
+.banner {
+  position: relative;
+  padding: 0 20px;
+}
+
+.banner__info {
+  position: relative;
+  z-index: 10;
+  max-width: 790px;
+}
+
+.banner h3 {
+  margin: 0;
+  margin-bottom: 36px;
+  font-family: $font_family_title;
+  font-size: 80px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.banner p {
+  position: relative;
+  margin: 0;
+  margin-bottom: 44px;
+  padding-left: 98px;
+  font-size: 22px;
+  line-height: 34px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 0;
+    width: 70px;
+    height: 2px;
+    background-color: $color_text;
+  }
+}
+
+.banner__button {
+  margin-left: 98px;
+  padding: 16px 44px;
+  font-size: 16px;
+  color: $color_text;
+  background-color: $color_blue;
+  border: 1px solid $color_blue;
+  transition: all 0.2s $transition_timing;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+
+  &:active {
+    color: rgba($color_text, 0.6);
+  }
+}
+
+.banner__button-text {
+  &--mobile {
+    display: none;
+  }
+}
+
+.banner img {
+  position: absolute;
+  top: -62px;
+  right: -54px;
+  width: 705px;
+  height: 515px;
+}
+
+.banner__scroll-button {
+  position: absolute;
+  bottom: -148px;
+  left: -15px;
+  font-size: 14px;
+  color: rgba($color_text, 0.5);
+  transform: rotate(-90deg);
+  transition: all 0.2s $transition_timing;
+
+  &:hover,
+  &:focus {
+    color: $color_text;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: $tablet_width) {
+  .banner {
+    padding: 0 90px;
+  }
+
+  .banner__info {
+    padding-right: 70px;
+  }
+
+  .banner__info h3 {
+    margin-bottom: 27px;
+    font-size: 60px;
+    line-height: 73px;
+  }
+
+  .banner p {
+    margin-bottom: 55px;
+    padding-left: 49px;
+    font-size: 18px;
+    line-height: 28px;
+
+    &::before {
+      width: 33px;
+    }
+  }
+
+  .banner__button {
+    margin-left: 50px;
+    padding: 15px 30px;
+  }
+
+  .banner img {
+    top: -184px;
+    right: 0;
+    width: 330px;
+    height: 466px;
+  }
+
+  .banner__scroll-button {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile_width) {
+  .banner {
+    padding: 0 15px;
+  }
+
+  .banner__info {
+    padding-right: 0;
+  }
+
+  .banner__info h3 {
+    margin-bottom: 28px;
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .banner p {
+    margin-bottom: 42px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .banner img {
+    top: -286px;
+    width: 294px;
+    height: 437px;
+  }
+
+  .banner__button {
+    width: 100%;
+    max-width: 290px;
+    margin: 0;
+    padding: 16px 32px;
+  }
+
+  .banner__button-text {
+    display: none;
+
+    &--mobile {
+      display: block;
+    }
+  }
+}

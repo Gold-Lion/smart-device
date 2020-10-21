@@ -1,0 +1,17 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+  min-width: 320px;
+  font-size: 16px;
+  background-color: rgba(#000000, 0.6);
+}
+
+.modal-open {
+  margin-right: 17px;
+  overflow: hidden;
+}

@@ -1,0 +1,23 @@
+$font_family_main: "PT Mono", "Georgia", serif;
+$font_family_title: "Roboto Condensed", "Arial", sans-serif;
+$font_family_tagline: "Roboto", "Arial", "Helvetica", sans-serif;
+$font_size_main: 16px;
+
+$color_grey: #666666;
+$color_grey_light: #788891;
+$color_grey_dark: #626962;
+$color_blue: #00b2ff;
+$color_blue_dark: #1b2d37;
+
+$mobile_width: 767px;
+$tablet_width: 1023px;
+$retina_dpi: 144dpi;
+$retina_dppx: 1.5dppx;
+
+$color_text: #ffffff;
+$color_hover: $color_blue;
+$color_text_secondary: $color_grey;
+$color_hover_secondary: $color_blue_dark;
+$color_border: $color_grey_dark;
+$color_logo_footer: #203c42;
+$transition_timing: ease-in;

@@ -1,0 +1,105 @@
+.feedback {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding: 91px calc(50% - 610px) 113px;
+  background-color: $color_blue;
+}
+
+.feedback__content {
+  position: relative;
+  z-index: 10;
+  width: 51%;
+  padding: 0 27px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -150px;
+    right: calc(100% + 85px);
+    width: 686px;
+    height: 641px;
+    background-image: url("../img/paper-airplane@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+
+    @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
+      background-image: url("../img/paper-airplane@2x.png");
+    }
+  }
+}
+
+.feedback__title {
+  margin: 0;
+  margin-bottom: 14px;
+  font-family: $font_family_title;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.feedback__tagline {
+  margin: 0;
+  padding-left: 4px;
+}
+
+.feedback form {
+  margin-top: 50px;
+}
+
+@media (max-width: $tablet_width) {
+  .feedback {
+    padding-top: 78px;
+    padding-bottom: 105px;
+  }
+
+  .feedback__content {
+    width: 100%;
+    padding: 0 87px;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  .feedback__title {
+    margin-bottom: 20px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .feedback__tagline {
+    padding-left: 7px;
+  }
+
+  .feedback form {
+    margin-top: 56px;
+  }
+}
+
+@media (max-width: $mobile_width) {
+  .feedback {
+    padding-top: 28px;
+    padding-bottom: 43px;
+  }
+
+  .feedback__content {
+    padding: 0 15px;
+  }
+
+  .feedback__title {
+    margin-bottom: 15px;
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .feedback__tagline {
+    padding: 0;
+    line-height: 21px;
+  }
+
+  .feedback form {
+    margin-top: 26px;
+  }
+}

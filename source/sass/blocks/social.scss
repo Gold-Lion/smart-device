@@ -1,0 +1,28 @@
+.social {
+  display: flex;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.social__link {
+  display: block;
+  width: 27px;
+  height: 27px;
+  color: #cdcdcd;
+  transition: all 0.2s $transition_timing;
+
+  &:hover,
+  &:focus {
+    color: $color_blue_dark;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.social__link svg {
+  fill: currentColor;
+}

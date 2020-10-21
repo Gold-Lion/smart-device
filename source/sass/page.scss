@@ -1,0 +1,29 @@
+.page__header {
+  padding: 33px calc(50% - 730px) 275px;
+}
+
+.page__footer {
+  padding-top: 65px;
+}
+
+@media (max-width: $tablet_width) {
+  .page__header {
+    padding-top: 20px;
+    padding-bottom: 165px;
+  }
+
+  .page__footer {
+    padding-top: 21px;
+  }
+}
+
+@media (max-width: $mobile_width) {
+  .page__header {
+    padding-top: 17px;
+    padding-bottom: 70px;
+  }
+
+  .page__footer {
+    padding-top: 46px;
+  }
+}

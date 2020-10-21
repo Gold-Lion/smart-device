@@ -12,8 +12,10 @@ const rename = require(`gulp-rename`);
 const imagemin = require(`gulp-imagemin`);
 const webpImage = require(`gulp-webp`);
 const svgstore = require(`gulp-svgstore`)
+const cheerio = require(`gulp-cheerio`);
 const posthtml = require(`gulp-posthtml`);
 const include = require(`posthtml-include`);
+const concat = require(`gulp-concat`);
 const del = require(`del`);
 
 const css = () => {
@@ -40,6 +42,7 @@ const server = () => {
 
   watch(`source/sass/**/*.{scss,sass}`, series(css));
   watch(`source/img/icon-*.svg`, series(sprite, html, refresh));
+  watch(`source/**/*.js`, series(scripts, refresh));
   watch(`source/*.html`, series(html, refresh));
 };
 
@@ -62,15 +65,34 @@ const images = () => {
 
 const webp = () => {
   return src(`source/img/**/*.{png,jpg}`)
-    .pipe(webpImage({quality: 90}))
+    .pipe(webpImage({quality: 80}))
     .pipe(dest(`source/img`));
 };
 
 const sprite = () => {
-  return src(`source/img/{icon-*,htmlacademy*}.svg`)
+  return src(`source/img/icon-*.svg`)
     .pipe(svgstore({inlineSvg: true}))
+    .pipe(cheerio({
+      run: function ($) {
+        $(`svg`).addClass(`visually-hidden`);
+        $('[fill]').removeAttr('fill');
+        $('[style]').removeAttr('style');
+      },
+      parserOptions: { xmlMode: true }
+    }))
     .pipe(rename(`sprite.svg`))
     .pipe(dest(`build/img`));
+};
+
+const scripts = () => {
+  return src(`source/js/*.js`)
+    .pipe(dest(`build/js`));
+};
+
+const jsLibs = () => {
+  return src(`node_modules/imask/dist/imask.min.js`)
+    .pipe(concat(`vendor.min.js`))
+    .pipe(dest(`build/js`));
 };
 
 const html = () => {
@@ -103,9 +125,11 @@ exports.refresh = refresh;
 exports.images = images;
 exports.webp = webp;
 exports.sprite = sprite;
+exports.scripts = scripts;
+exports.jsLibs = jsLibs;
 exports.html = html;
 exports.copy = copy;
 exports.clean = clean;
 
-exports.build = series(clean, copy, css, sprite, html);
+exports.build = series(clean, copy, css, sprite, scripts, jsLibs, html);
 exports.start = series(this.build, server);

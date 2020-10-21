@@ -1,0 +1,267 @@
+.footer {
+  color: $color_blue_dark;
+}
+
+.footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 calc(50% - 722px);
+}
+
+.footer__head {
+  flex-grow: 1;
+  padding-left: 15px;
+}
+
+.footer__logo {
+  margin-bottom: 54px;
+}
+
+.footer__years-of-company {
+  margin: 0;
+  display: none;
+}
+
+.footer__info {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: calc(100% - 260px);
+  max-width: 1005px;
+  padding-right: 15px;
+}
+
+.footer__contacts {
+  width: 334px;
+}
+
+.footer__navigation-title h3,
+.footer__contacts-title h3 {
+  margin: 0;
+  font-family: $font_family_title;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer__navigation-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+.footer__contacts-content {
+  margin-top: 32px;
+}
+
+.footer__navigation a,
+.footer__contacts a {
+  font-size: 15px;
+  line-height: 25px;
+  color: rgba($color_blue_dark, 0.5);
+  transition: all 0.2s $transition_timing;
+
+  &:hover,
+  &:focus {
+    color: $color_hover_secondary;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.footer__contacts address,
+.footer__contacts a {
+  display: block;
+  font-style: normal;
+}
+
+.footer__contacts address {
+  font-size: 15px;
+  line-height: 25px;
+  color: rgba($color_blue_dark, 0.5);
+}
+
+.footer__navigation ul:not(:last-child) {
+  margin-right: 72px;
+}
+
+.footer__navigation-button,
+.footer__contacts-button {
+  display: none;
+}
+
+.footer__bottom {
+  margin-top: 52px;
+  padding: 18px calc(50% - 706px);
+}
+
+@media (max-width: $tablet_width) {
+  .footer__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 22px 24px 28px;
+  }
+
+  .footer__logo {
+    margin: 0;
+  }
+
+  .footer__logo .logo__text {
+    margin-left: 17px;
+  }
+
+  .footer__years-of-company {
+    display: block;
+    margin-top: 2px;
+    margin-left: 12px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: rgba($color_blue_dark, 0.5);
+    text-transform: uppercase;
+  }
+
+  .footer__info {
+    flex-grow: 1;
+    padding: 0 27px;
+    padding-top: 37px;
+    border-top: 1px solid rgba(#626962, 0.2);
+  }
+
+  .footer__contacts {
+    width: 386px;
+  }
+
+  .footer__contacts-content {
+    margin-top: 25px;
+  }
+
+  .footer__bottom {
+    margin-top: 37px;
+    padding: 25px 23px 28px 31px;
+  }
+}
+
+@media (max-width: $mobile_width) {
+  .footer {
+    overflow: hidden;
+  }
+
+  .footer__head {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 15px;
+    padding-bottom: 54px;
+  }
+
+  .footer__logo {
+    margin-bottom: 30px;
+  }
+
+  .footer__logo img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .footer__logo .logo__text {
+    display: block;
+  }
+
+  .footer__years-of-company {
+    margin: 0;
+    margin-bottom: 36px;
+  }
+
+  .footer__info {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .footer__navigation {
+    padding: 28px 15px 27px;
+  }
+
+  .footer__navigation ul:not(:last-child) {
+    margin: 0;
+  }
+
+  .footer__contacts {
+    width: 100%;
+    padding: 28px 15px 25px;
+    border-top: 1px solid rgba(#626962, 0.2);
+  }
+
+  .footer__navigation-title,
+  .footer__contacts-title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__navigation-content,
+  .footer__contacts-content {
+    display: none;
+  }
+
+  .footer__navigation-content.active,
+  .footer__contacts-content.active {
+    display: block;
+  }
+
+  .footer__contacts-content {
+    margin-top: 34px;
+    padding-right: 11px;
+  }
+
+  .footer__navigation-button,
+  .footer__contacts-button {
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #c4c4c4;
+      transition: all 0.2s $transition_timing;
+    }
+
+    &::before {
+      top: 50%;
+      width: 16px;
+      height: 1px;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      left: 50%;
+      width: 1px;
+      height: 16px;
+      transform: translateX(-50%);
+    }
+  }
+
+  .footer__navigation-button.active,
+  .footer__contacts-button.active {
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+
+  .footer__bottom {
+    margin-top: 0;
+    padding: 32px 28px 26px;
+  }
+}
