@@ -1,11 +1,12 @@
 .about {
   color: $color_grey;
-  padding: 0 calc(50% - 610px);
   padding-bottom: 111px;
 }
 
 .about__wrapper {
   position: relative;
+  max-width: 1220px;
+  margin: 0 auto;
   padding: 0 27px;
   padding-left: 205px;
 
@@ -44,6 +45,10 @@
   &:last-of-type {
     margin-bottom: 40px;
   }
+}
+
+.about__description small {
+  display: none;
 }
 
 .about__button-more {
@@ -91,6 +96,10 @@
     &:last-of-type {
       margin-bottom: 43px;
     }
+  }
+
+  .about__description small {
+    display: inline;
   }
 
   .about__description-more {

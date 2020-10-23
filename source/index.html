@@ -24,90 +24,95 @@
   <include src="build/img/sprite.svg"></include>
 
   <header class="page__header header">
-    <nav class="header__navigation navigation">
-      <a class="navigation__logo logo">
-        <img class="logo__icon" src="img/logo.svg" width="52" height="52" alt="Логотип Smart Device">
-        <div class="logo__text">
-          <p class="logo__title">Smart Device</p>
-          <p class="logo__tagline">умные технологии</p>
+    <div class="header__wrapper">
+      <nav class="header__navigation navigation">
+        <a class="navigation__logo logo">
+          <img src="img/logo.svg" width="52" height="52" alt="Логотип Smart Device">
+          <div class="logo__text">
+            <p class="logo__title">Smart Device</p>
+            <p class="logo__tagline">умные технологии</p>
+          </div>
+        </a>
+        <button class="navigation__toggle button" aria-label="Открыть меню"></button>
+        <div class="navigation__contacts navigation-contacts">
+          <a class="navigation-contacts__link navigation-contacts__link--email" href="mailto:info@sd.ru" aria-label="Наша электронная почта">
+            <span>info@sd.ru</span>
+          </a>
+          <a class="navigation-contacts__link navigation-contacts__link--phone" href="tel:+74950005252" aria-label="Наш номер телефона">
+            <span>+7 (495) 000 52 52</span>
+          </a>
+          <a class="navigation-contacts__callback-button button" href="#callback">Заказать звонок</a>
         </div>
-      </a>
-      <button class="navigation__toggle button" aria-label="Открыть меню"></button>
-      <div class="navigation__contacts navigation-contacts">
-        <a class="navigation-contacts__link navigation-contacts__link--email" href="mailto:info@sd.ru" aria-label="Наша электронная почта">
-          <span>info@sd.ru</span>
-        </a>
-        <a class="navigation-contacts__link navigation-contacts__link--phone" href="tel:+74950005252" aria-label="Наш номер телефона">
-          <span>+7 (495) 000 52 52</span>
-        </a>
-        <a class="navigation-contacts__callback-button button" href="#callback">Заказать звонок</a>
-      </div>
-    </nav>
-    <h1 class="visually-hidden">Компания Smart Device - поставщик и производитель печатных плат и комплектующих</h1>
-    <section class="banner">
-      <div class="banner__info">
-        <h3>Печатные платы</h3>
-        <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a class="banner__button button" href="#feedback">
-          <span class="banner__button-text">получить бесплатную консультацию</span>
-          <span class="banner__button-text banner__button-text--mobile">бесплатная консультация</span>
-        </a>
-      </div>
-      <picture>
-        <source type="image/webp" media="(min-width: 1024px)" srcset="img/index-pcb-desktop@1x.webp 1x, img/index-pcb-desktop@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)" srcset="img/index-pcb-tablet@1x.webp 1x, img/index-pcb-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/index-pcb-mobile@1x.webp 1x, img/index-pcb-mobile@2x.webp 2x">
+      </nav>
+      <h1 class="visually-hidden">Компания Smart Device - поставщик и производитель печатных плат и комплектующих</h1>
+      <section class="banner">
+        <div class="banner__info">
+          <h3>Печатные платы</h3>
+          <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <a class="banner__button button" href="#feedback">
+            <span class="banner__button-text">получить бесплатную консультацию</span>
+            <span class="banner__button-text banner__button-text--mobile">бесплатная консультация</span>
+          </a>
+        </div>
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="img/index-pcb-desktop@1x.webp 1x, img/index-pcb-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/index-pcb-tablet@1x.webp 1x, img/index-pcb-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/index-pcb-mobile@1x.webp 1x, img/index-pcb-mobile@2x.webp 2x">
 
-        <source media="(min-width: 1024px)" srcset="img/index-pcb-desktop@1x.png 1x, img/index-pcb-desktop@2x.png 2x">
-        <source media="(min-width: 768px)" srcset="img/index-pcb-tablet@1x.png 1x, img/index-pcb-tablet@2x.png 2x">
+          <source media="(min-width: 1024px)" srcset="img/index-pcb-desktop@1x.png 1x, img/index-pcb-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/index-pcb-tablet@1x.png 1x, img/index-pcb-tablet@2x.png 2x">
 
-        <!-- 1х: 294px; 2x: 588px -->
-        <img src="img/index-pcb-mobile@1x.png" srcset="img/index-pcb-mobile@2x.png 2x" width="294" height="437" alt="Изображение товара">
-      </picture>
-      <a class="banner__scroll-button" href="#advantages">Скролл вниз</a>
-    </section>
+          <!-- 1х: 294px; 2x: 588px -->
+          <img src="img/index-pcb-mobile@1x.png" srcset="img/index-pcb-mobile@2x.png 2x" width="294" height="437" alt="Изображение товара">
+        </picture>
+        <a class="banner__scroll-button" href="#advantages">Скролл вниз</a>
+      </section>
+
+    </div>
   </header>
 
   <main class="main">
     <section class="advantages" id="advantages">
-      <h2 class="visually-hidden">Наши преимущества</h2>
-      <ul class="advantages__list">
-        <li class="advantages__item advantages__item--deadlines">
-          <svg width="30" height="35">
-            <use xlink:href="#icon-stopwatch"></use>
-          </svg>
-          <h3>Оперативные сроки</h3>
-          <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки.</p>
-        </li>
-        <li class="advantages__item advantages__item--providers">
-          <svg width="35" height="35">
-            <use xlink:href="#icon-hired"></use>
-          </svg>
-          <h3>Крупные поставщики</h3>
-          <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
-        </li>
-        <li class="advantages__item advantages__item--privacy">
-          <svg width="36" height="31">
-            <use xlink:href="#icon-detective"></use>
-          </svg>
-          <h3>Полная конфиденциальность</h3>
-          <p>По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
-        </li>
-        <li class="advantages__item advantages__item--cost">
-          <svg width="35" height="35">
-            <use xlink:href="#icon-tag"></use>
-          </svg>
-          <h3>Персонализация стоимости</h3>
-          <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
-        </li>
-      </ul>
+      <div class="advantages__wrapper">
+        <h2 class="visually-hidden">Наши преимущества</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item advantages__item--deadlines">
+            <svg width="30" height="35">
+              <use xlink:href="#icon-stopwatch"></use>
+            </svg>
+            <h3>Оперативные сроки</h3>
+            <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки.</p>
+          </li>
+          <li class="advantages__item advantages__item--providers">
+            <svg width="35" height="35">
+              <use xlink:href="#icon-hired"></use>
+            </svg>
+            <h3>Крупные поставщики</h3>
+            <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+          </li>
+          <li class="advantages__item advantages__item--privacy">
+            <svg width="36" height="31">
+              <use xlink:href="#icon-detective"></use>
+            </svg>
+            <h3>Полная конфиденциальность</h3>
+            <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
+          </li>
+          <li class="advantages__item advantages__item--cost">
+            <svg width="35" height="35">
+              <use xlink:href="#icon-tag"></use>
+            </svg>
+            <h3>Персонализация стоимости</h3>
+            <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="about">
       <div class="about__wrapper">
         <h2 class="about__title">О компании</h2>
         <p class="about__description">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-        <p class="about__description">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
+        <p class="about__description">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<small>…</small>
           <span class="about__description-more">(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
         </p>
         <a class="about__button-more button" href="#about-more">Подробнее</a>
@@ -115,74 +120,78 @@
     </section>
 
     <section class="products">
-      <h2 class="products__title">Service Device предлагает следующие товары и&nbsp;услуги</h2>
-      <div class="products__list">
-        <a class="products__item product-card" href="#">
-          <h3>Производство печатных плат</h3>
-          <picture>
-            <source type="image/webp" media="(min-width: 1024px)" srcset="img/production-pcb-desktop@1x.webp 1x, img/production-pcb-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/production-pcb-tablet@1x.webp 1x, img/production-pcb-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/production-pcb-mobile@1x.webp 1x, img/production-pcb-mobile@2x.webp 2x">
+      <div class="products__wrapper">
+        <h2 class="products__title">Service Device предлагает следующие товары и&nbsp;услуги</h2>
+        <div class="products__list">
+          <a class="products__item product-card" href="#">
+            <h3>Производство печатных плат</h3>
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/production-pcb-desktop@1x.webp 1x, img/production-pcb-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/production-pcb-tablet@1x.webp 1x, img/production-pcb-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/production-pcb-mobile@1x.webp 1x, img/production-pcb-mobile@2x.webp 2x">
 
-            <source media="(min-width: 1024px)" srcset="img/production-pcb-desktop@1x.png 1x, img/production-pcb-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/production-pcb-tablet@1x.png 1x, img/production-pcb-tablet@2x.png 2x">
+              <source media="(min-width: 1024px)" srcset="img/production-pcb-desktop@1x.png 1x, img/production-pcb-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/production-pcb-tablet@1x.png 1x, img/production-pcb-tablet@2x.png 2x">
 
-            <!-- 1х: 370px; 2x: 740px -->
-            <img src="img/production-pcb-mobile@1x.png" srcset="img/production-pcb-mobile@2x.png 2x" width="370" height="620" alt="Изображение товара">
-          </picture>
-        </a>
-        <a class="products__item product-card" href="#">
-          <h3>Монтаж печатных плат</h3>
-          <picture>
-            <source type="image/webp" media="(min-width: 1024px)" srcset="img/installation-pcb-desktop@1x.webp 1x, img/installation-pcb-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/installation-pcb-tablet@1x.webp 1x, img/installation-pcb-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/installation-pcb-mobile@1x.webp 1x, img/installation-pcb-mobile@2x.webp 2x">
+              <!-- 1х: 370px; 2x: 740px -->
+              <img src="img/production-pcb-mobile@1x.png" srcset="img/production-pcb-mobile@2x.png 2x" width="370" height="620" alt="Изображение товара">
+            </picture>
+          </a>
+          <a class="products__item product-card" href="#">
+            <h3>Монтаж печатных плат</h3>
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/installation-pcb-desktop@1x.webp 1x, img/installation-pcb-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/installation-pcb-tablet@1x.webp 1x, img/installation-pcb-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/installation-pcb-mobile@1x.webp 1x, img/installation-pcb-mobile@2x.webp 2x">
 
-            <source media="(min-width: 1024px)" srcset="img/installation-pcb-desktop@1x.png 1x, img/installation-pcb-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/installation-pcb-tablet@1x.png 1x, img/installation-pcb-tablet@2x.png 2x">
+              <source media="(min-width: 1024px)" srcset="img/installation-pcb-desktop@1x.png 1x, img/installation-pcb-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/installation-pcb-tablet@1x.png 1x, img/installation-pcb-tablet@2x.png 2x">
 
-            <!-- 1х: 370px; 2x: 740px -->
-            <img src="img/installation-pcb-mobile@1x.png" srcset="img/installation-pcb-mobile@2x.png 2x" width="370" height="620" alt="Изображение товара">
-          </picture>
-        </a>
-        <a class="products__item product-card" href="#">
-          <h3>Комплектующие для светотехники</h3>
-          <picture>
-            <source type="image/webp" media="(min-width: 1024px)" srcset="img/components-desktop@1x.webp 1x, img/components-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/components-tablet@1x.webp 1x, img/components-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/components-mobile@1x.webp 1x, img/components-mobile@2x.webp 2x">
+              <!-- 1х: 370px; 2x: 740px -->
+              <img src="img/installation-pcb-mobile@1x.png" srcset="img/installation-pcb-mobile@2x.png 2x" width="370" height="620" alt="Изображение товара">
+            </picture>
+          </a>
+          <a class="products__item product-card" href="#">
+            <h3>Комплектующие для светотехники</h3>
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/components-desktop@1x.webp 1x, img/components-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/components-tablet@1x.webp 1x, img/components-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/components-mobile@1x.webp 1x, img/components-mobile@2x.webp 2x">
 
-            <source media="(min-width: 1024px)" srcset="img/components-desktop@1x.png 1x, img/components-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/components-tablet@1x.png 1x, img/components-tablet@2x.png 2x">
+              <source media="(min-width: 1024px)" srcset="img/components-desktop@1x.png 1x, img/components-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/components-tablet@1x.png 1x, img/components-tablet@2x.png 2x">
 
-            <!-- 1х: 370px; 2x: 740px -->
-            <img src="img/components-mobile@1x.png" srcset="img/components-mobile@2x.png 2x" width="370" height="620" alt="Изображение товара">
-          </picture>
-        </a>
+              <!-- 1х: 370px; 2x: 740px -->
+              <img src="img/components-mobile@1x.png" srcset="img/components-mobile@2x.png 2x" width="370" height="620" alt="Изображение товара">
+            </picture>
+          </a>
+        </div>
       </div>
     </section>
 
     <section class="feedback" id="feedback">
-      <div class="feedback__content">
-        <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
-        <p class="feedback__tagline">Мы проконсультируем Вас бесплатно</p>
-        <form class="form" action="https://echo.htmlacademy.ru" method="post">
-          <label class="visually-hidden" for="feedback-name" aria-label="Введите Ваше имя"></label>
-          <input id="feedback-name" name="feedback-name" type="text" placeholder="Имя" required>
+      <div class="feedback__wrapper">
+        <div class="feedback__content">
+          <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
+          <p class="feedback__tagline">Мы проконсультируем Вас бесплатно</p>
+          <form class="form" action="https://echo.htmlacademy.ru" method="post">
+            <label class="visually-hidden" for="feedback-name" aria-label="Введите Ваше имя"></label>
+            <input id="feedback-name" name="feedback-name" type="text" placeholder="Имя" required>
 
-          <label class="visually-hidden" for="feedback-phone" aria-label="Введите Ваш телефон"></label>
-          <input id="feedback-phone" name="feedback-phone" type="tel" placeholder="Телефон" minlength="16" required>
+            <label class="visually-hidden" for="feedback-phone" aria-label="Введите Ваш телефон"></label>
+            <input id="feedback-phone" name="feedback-phone" type="tel" placeholder="Телефон" minlength="16" required>
 
-          <label class="visually-hidden" for="feedback-message" aria-label="Введите Ваш вопрос"></label>
-          <textarea id="feedback-message" name="feedback-message" placeholder="Ваш вопрос"></textarea>
+            <label class="visually-hidden" for="feedback-message" aria-label="Введите Ваш вопрос"></label>
+            <textarea id="feedback-message" name="feedback-message" placeholder="Ваш вопрос"></textarea>
 
-          <div class="form__bottom">
-            <input class="form__input-checkbox visually-hidden" id="feedback-privacy" name="feedback-privacy" type="checkbox" checked>
-            <label class="form__label form__label--privacy" for="feedback-privacy">Я согласен на обработку персональных данных</label>
+            <div class="form__bottom">
+              <input class="form__input-checkbox visually-hidden" id="feedback-privacy" name="feedback-privacy" type="checkbox" checked>
+              <label class="form__label form__label--privacy" for="feedback-privacy">Я согласен на обработку персональных данных</label>
 
-            <button class="form__button button" type="submit">Задать вопрос</button>
-          </div>
-        </form>
+              <button class="form__button button" type="submit">Задать вопрос</button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -273,13 +282,16 @@
       </div>
     </div>
 
-    <div class="footer__bottom copyright">
-      <p class="copyright__text">Все права защищены</p>
-      <p class="copyright__text">1999-2018 SD Service Devices</p>
-      <a class="copyright__link copyright__link--privacy" href="#">Условия конфиденциальности</a>
-      <a class="copyright__link copyright__link--developed" href="#">Developed by wow studio</a>
+    <div class="footer__copyright copyright">
+      <div class="copyright__wrapper">
+        <p class="copyright__text">Все права защищены</p>
+        <p class="copyright__text">1999-2018 SD Service Devices</p>
+        <a class="copyright__link copyright__link--privacy" href="#">Условия конфиденциальности</a>
+        <a class="copyright__link copyright__link--developed" href="#">Developed by wow studio</a>
+      </div>
     </div>
   </footer>
+
   <section class="modal modal-callback">
     <h2 class="visually-hidden">Форма обратной связи</h2>
     <div class="modal-callback__content">

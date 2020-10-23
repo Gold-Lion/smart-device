@@ -13,6 +13,7 @@
   &--privacy {
     order: 1;
     max-width: 260px;
+    margin-top: 46px;
     padding-left: 31px;
   }
 
@@ -44,8 +45,8 @@
 
   &:checked + .form__label {
     &::after {
-      top: 8px;
-      left: 4.5px;
+      top: 6px;
+      left: 5px;
       width: 7px;
       height: 4px;
       border: 1px solid currentColor;
@@ -99,12 +100,14 @@
 .form textarea {
   width: 100%;
   min-height: 154px;
-  margin-bottom: 46px;
+  margin-bottom: 0;
   resize: vertical;
   overflow: auto;
 }
 
 .form__button {
+  margin-top: 46px;
+  margin-right: auto;
   padding: 12px 80px;
   color: $color_text;
   border: 1px solid currentColor;
@@ -130,8 +133,6 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  column-gap: 10px;
-  row-gap: 20px;
   width: 100%;
 }
 
@@ -163,6 +164,12 @@
 }
 
 @media (max-width: $mobile_width) {
+  .form__label {
+    &--privacy {
+      margin-top: 32px;
+    }
+  }
+
   .form input,
   .form textarea {
     padding: 13px 16px 17px;
@@ -175,15 +182,11 @@
 
   .form textarea {
     min-height: 104px;
-    margin-bottom: 32px;
   }
 
   .form__button {
     width: 100%;
     max-width: 290px;
-  }
-
-  .form__bottom {
-    row-gap: 31px;
+    margin-top: 32px;
   }
 }

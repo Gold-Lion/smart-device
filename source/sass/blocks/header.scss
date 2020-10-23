@@ -11,6 +11,12 @@
   }
 }
 
+.header__wrapper {
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
 .header__navigation {
   margin-bottom: 235px;
 }
@@ -38,8 +44,17 @@
     }
   }
 
+  .header__wrapper {
+    padding: 0 15px;
+  }
+
+  .header .logo {
+    display: block;
+    width: 38px;
+    height: 38px;
+  }
+
   .header__navigation {
     margin-bottom: 231px;
-    padding: 0 15px;
   }
 }

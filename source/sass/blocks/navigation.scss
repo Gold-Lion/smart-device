@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   z-index: 10;
-  padding: 0 25px;
 }
 
 .navigation__logo {
@@ -45,11 +44,5 @@
 
   .navigation__contacts {
     margin-left: 35px;
-  }
-}
-
-@media (max-width: $mobile_width) {
-  .navigation {
-    padding: 0 15px;
   }
 }

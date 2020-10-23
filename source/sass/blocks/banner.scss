@@ -1,12 +1,12 @@
 .banner {
   position: relative;
-  padding: 0 20px;
 }
 
 .banner__info {
   position: relative;
   z-index: 10;
   max-width: 790px;
+  margin-left: -4px;
 }
 
 .banner h3 {
@@ -66,7 +66,7 @@
 .banner img {
   position: absolute;
   top: -62px;
-  right: -54px;
+  right: -79px;
   width: 705px;
   height: 515px;
 }
@@ -74,7 +74,7 @@
 .banner__scroll-button {
   position: absolute;
   bottom: -148px;
-  left: -15px;
+  left: -40px;
   font-size: 14px;
   color: rgba($color_text, 0.5);
   transform: rotate(-90deg);
@@ -92,7 +92,7 @@
 
 @media (max-width: $tablet_width) {
   .banner {
-    padding: 0 90px;
+    padding: 0 68px;
   }
 
   .banner__info {
@@ -123,7 +123,7 @@
 
   .banner img {
     top: -184px;
-    right: 0;
+    right: calc(25px * -1);
     width: 330px;
     height: 466px;
   }
@@ -135,7 +135,7 @@
 
 @media (max-width: $mobile_width) {
   .banner {
-    padding: 0 15px;
+    padding: 0 5px;
   }
 
   .banner__info {
@@ -156,6 +156,7 @@
 
   .banner img {
     top: -286px;
+    right: -12px;
     width: 294px;
     height: 437px;
   }
@@ -163,8 +164,8 @@
   .banner__button {
     width: 100%;
     max-width: 290px;
-    margin: 0;
-    padding: 16px 32px;
+    margin-left: 4px;
+    padding: 16px 29px;
   }
 
   .banner__button-text {
