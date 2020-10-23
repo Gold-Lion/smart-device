@@ -60,16 +60,17 @@
 
 .modal-callback textarea {
   min-height: 104px;
-  margin-bottom: 32px;
+  margin-bottom: 0;
 }
 
 .modal-callback .form__button {
   width: 100%;
-  margin-bottom: 12px;
+  margin-top: 32px;
   padding: 13px 80px;
 }
 
 .modal-callback .form__label--privacy {
   max-width: 375px;
+  margin-top: 34px;
   padding-left: 50px;
 }
