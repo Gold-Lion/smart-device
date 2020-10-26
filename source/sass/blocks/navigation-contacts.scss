@@ -1,6 +1,5 @@
 .navigation-contacts {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   row-gap: 20px;
@@ -15,7 +14,7 @@
   transition: color 0.2s $transition_timing;
 
   &--phone {
-    margin-left: 39px;
+    margin-left: 86px;
   }
 
   &::before {
@@ -52,6 +51,7 @@
 }
 
 .navigation-contacts__callback-button {
+  margin-left: auto;
   padding: 12px 26px;
   color: $color_text;
   border: 1px solid currentColor;

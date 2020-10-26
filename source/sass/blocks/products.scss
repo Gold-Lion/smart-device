@@ -25,6 +25,10 @@
   flex-wrap: wrap;
 }
 
+.products__item:nth-child(n + 4) {
+  margin-top: 20px;
+}
+
 @media (max-width: $tablet_width) {
   .products {
     padding-top: 48px;

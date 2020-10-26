@@ -8,11 +8,12 @@
 }
 
 .logo__text {
-  margin-left: 16px;
+  margin-left: 15px;
 }
 
 .logo__title {
   margin: 0;
+  margin-top: 3px;
   font-family: $font_family_title;
   font-weight: 700;
   font-size: 25px;
@@ -20,6 +21,7 @@
 
 .logo__tagline {
   margin: 0;
+  margin-top: -3px;
   font-family: $font_family_tagline;
   font-weight: 500;
   font-size: 12px;

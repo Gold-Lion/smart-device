@@ -50,6 +50,10 @@
   padding-left: 4px;
 }
 
+.feedback .form__bottom {
+  column-gap: 20px;
+}
+
 .feedback form {
   margin-top: 50px;
 }
@@ -110,6 +114,16 @@
   }
 
   .feedback form {
+    max-width: 500px;
+    margin: 0 auto;
     margin-top: 26px;
+  }
+
+  .feedback .form__bottom {
+    justify-content: center;
+  }
+
+  .feedback .form__button {
+    margin-right: 0;
   }
 }

@@ -1,4 +1,6 @@
 .header {
+  padding-top: 33px;
+  padding-bottom: 275px;
   background-color: $color_blue_dark;
   background-image: url("../img/index-background-desktop@1x.png");
   background-repeat: no-repeat;
@@ -23,6 +25,8 @@
 
 @media (max-width: $tablet_width) {
   .header {
+    padding-top: 20px;
+    padding-bottom: 165px;
     background-image: url("../img/index-background-tablet@1x.png");
 
     @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
@@ -37,6 +41,8 @@
 
 @media (max-width: $mobile_width) {
   .header {
+    padding-top: 17px;
+    padding-bottom: 70px;
     background-image: url("../img/index-background-mobile@1x.png");
 
     @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {

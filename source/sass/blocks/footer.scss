@@ -1,4 +1,5 @@
 .footer {
+  padding-top: 65px;
   color: $color_blue_dark;
 }
 
@@ -39,6 +40,7 @@
 
 .footer__navigation {
   flex-grow: 1;
+  padding-right: 20px;
 }
 
 .footer__contacts {
@@ -96,7 +98,7 @@
 }
 
 .footer__navigation ul:not(:last-child) {
-  margin-right: 11%;
+  margin-right: 11.7%;
 }
 
 .footer__navigation-button,
@@ -110,6 +112,10 @@
 }
 
 @media (max-width: $tablet_width) {
+  .footer {
+    padding-top: 21px;
+  }
+
   .footer__content {
     padding: 0;
   }
@@ -163,6 +169,7 @@
 
 @media (max-width: $mobile_width) {
   .footer {
+    padding-top: 46px;
     overflow: hidden;
   }
 
@@ -204,6 +211,11 @@
     margin: 0;
   }
 
+  .footer__navigation.active .footer__navigation-content,
+  .footer__contacts.active .footer__contacts-content {
+    display: block;
+  }
+
   .footer__contacts {
     width: 100%;
     padding: 28px 15px 25px;
@@ -212,6 +224,7 @@
 
   .footer__navigation-title,
   .footer__contacts-title {
+    position: relative;
     display: flex;
     justify-content: space-between;
   }
@@ -221,11 +234,6 @@
     display: none;
   }
 
-  .footer__navigation-content.active,
-  .footer__contacts-content.active {
-    display: block;
-  }
-
   .footer__contacts-content {
     margin-top: 34px;
     padding-right: 11px;
@@ -233,9 +241,9 @@
 
   .footer__navigation-button,
   .footer__contacts-button {
-    position: relative;
+    position: absolute;
     display: block;
-    width: 16px;
+    width: 96%;
     height: 16px;
 
     &::before,
@@ -243,7 +251,7 @@
       content: "";
       position: absolute;
       top: 0;
-      left: 0;
+      left: 100%;
       background-color: #c4c4c4;
       transition: all 0.2s $transition_timing;
     }
@@ -252,19 +260,18 @@
       top: 50%;
       width: 16px;
       height: 1px;
-      transform: translateY(-50%);
+      transform: translateX(-50%);
     }
 
     &::after {
-      left: 50%;
+      left: 100%;
       width: 1px;
       height: 16px;
-      transform: translateX(-50%);
     }
   }
 
-  .footer__navigation-button.active,
-  .footer__contacts-button.active {
+  .footer__navigation.active .footer__navigation-button,
+  .footer__contacts.active .footer__contacts-button {
     &::after {
       transform: rotate(90deg);
     }

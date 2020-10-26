@@ -82,6 +82,8 @@
   color: $color_text;
   background-color: #1abaff;
   border: 1px solid #1abaff;
+  border-radius: 0;
+  transition: border-color 0.2s $transition_timing;
 
   &::placeholder {
     color: $color_text;
@@ -90,11 +92,23 @@
   &:hover {
     border-color: $color_hover_secondary;
   }
+
+  &:focus {
+    outline-style: dashed;
+  }
 }
 
 .form input {
   width: 47%;
   margin-bottom: 40px;
+
+  &:focus {
+    outline-offset: 5px;
+  }
+
+  &:valid {
+    box-shadow: 0 0 0 3px $color_success;
+  }
 }
 
 .form textarea {
@@ -152,7 +166,8 @@
   }
 
   .form__button {
-    padding: 12px 87px;
+    padding: 12px 84px;
+    margin-left: 5px;
   }
 
   .form__label {
@@ -166,6 +181,7 @@
 @media (max-width: $mobile_width) {
   .form__label {
     &--privacy {
+      max-width: 288px;
       margin-top: 32px;
     }
   }
@@ -188,5 +204,6 @@
     width: 100%;
     max-width: 290px;
     margin-top: 32px;
+    margin-left: 0;
   }
 }

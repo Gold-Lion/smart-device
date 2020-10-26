@@ -8,8 +8,6 @@
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Компания Smart Device - поставщик и производитель печатных плат и комплектующих">
-  <link rel="preload" href="fonts/roboto-medium.woff" as="font">
-  <link rel="preload" href="fonts/roboto-medium.woff2" as="font">
   <link rel="preload" href="fonts/robotocondensed-bold.woff" as="font">
   <link rel="preload" href="fonts/robotocondensed-bold.woff2" as="font">
   <link rel="preload" href="fonts/robotocondensed-regular.woff" as="font">
@@ -23,7 +21,7 @@
 
   <include src="build/img/sprite.svg"></include>
 
-  <header class="page__header header">
+  <header class="header">
     <div class="header__wrapper">
       <nav class="header__navigation navigation">
         <a class="navigation__logo logo">
@@ -179,13 +177,13 @@
             <input id="feedback-name" name="feedback-name" type="text" placeholder="Имя" required>
 
             <label class="visually-hidden" for="feedback-phone" aria-label="Введите Ваш телефон"></label>
-            <input id="feedback-phone" name="feedback-phone" type="tel" placeholder="Телефон" minlength="16" required>
+            <input id="feedback-phone" name="feedback-phone" type="tel" placeholder="Телефон" minlength="16" pattern="\+7\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" title="+7(___)___-__-__" required>
 
             <label class="visually-hidden" for="feedback-message" aria-label="Введите Ваш вопрос"></label>
             <textarea id="feedback-message" name="feedback-message" placeholder="Ваш вопрос"></textarea>
 
             <div class="form__bottom">
-              <input class="form__input-checkbox visually-hidden" id="feedback-privacy" name="feedback-privacy" type="checkbox" checked>
+              <input class="form__input-checkbox visually-hidden" id="feedback-privacy" name="feedback-privacy" type="checkbox" required>
               <label class="form__label form__label--privacy" for="feedback-privacy">Я согласен на обработку персональных данных</label>
 
               <button class="form__button button" type="submit">Задать вопрос</button>
@@ -197,7 +195,7 @@
 
   </main>
 
-  <footer class="page__footer footer">
+  <footer class="footer">
     <div class="footer__content">
       <div class="footer__head">
         <a class="footer__logo logo">
@@ -234,12 +232,12 @@
       </div>
 
       <div class="footer__info">
-        <div class="footer__navigation">
+        <div class="footer__navigation active">
           <div class="footer__navigation-title">
             <h3>Разделы сайта</h3>
-            <button class="footer__navigation-button button active" aria-label="Открыть/закрыть подробную информацию"></button>
+            <button class="footer__navigation-button button" aria-label="Открыть/закрыть подробную информацию"></button>
           </div>
-          <div class="footer__navigation-content active">
+          <div class="footer__navigation-content">
             <ul class="footer__navigation-list">
               <li>
                 <a href="#">О компании</a>
@@ -267,12 +265,12 @@
             </ul>
           </div>
         </div>
-        <div class="footer__contacts">
+        <div class="footer__contacts active">
           <div class="footer__contacts-title">
             <h3>Наш офис</h3>
-            <button class="footer__contacts-button button active" aria-label="Открыть/закрыть подробную информацию"></button>
+            <button class="footer__contacts-button button" aria-label="Открыть/закрыть подробную информацию"></button>
           </div>
-          <div class="footer__contacts-content active">
+          <div class="footer__contacts-content">
             <address>г. Мытищи, Олимпийский проспект, д.10</address>
             <a href="tel:+74955894050">+7 (495) 589-40-50</a>
             <a href="tel:+79250038767">+7 (925) 003-87-67</a>
@@ -302,13 +300,13 @@
         <input id="callback-name" name="callback-name" type="text" placeholder="Имя" required>
 
         <label class="visually-hidden" for="callback-phone" aria-label="Введите Ваш телефон"></label>
-        <input id="callback-phone" name="callback-phone" type="tel" placeholder="Телефон" minlength="16" required>
+        <input id="callback-phone" name="callback-phone" type="tel" placeholder="Телефон" minlength="16" pattern="\+7\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" title="+7(___)___-__-__" required>
 
         <label class="visually-hidden" for="callback-message" aria-label="Введите Ваш вопрос"></label>
         <textarea id="callback-message" name="callback-message" placeholder="Ваш вопрос"></textarea>
 
         <div class="form__bottom">
-          <input class="form__input-checkbox visually-hidden" id="callback-privacy" name="callback-privacy" type="checkbox" checked>
+          <input class="form__input-checkbox visually-hidden" id="callback-privacy" name="callback-privacy" type="checkbox" required>
           <label class="form__label form__label--privacy" for="callback-privacy">Я согласен на обработку персональных данных</label>
 
           <button class="form__button button" type="submit">Отправить</button>
