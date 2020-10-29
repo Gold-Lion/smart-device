@@ -60,7 +60,7 @@
     padding: 39px 44px;
 
     &:last-of-type h3 {
-      padding-top: 11px;
+      padding-top: 9px;
     }
   }
 
@@ -72,6 +72,10 @@
 @media (max-width: $mobile_width) {
   .product-card {
     padding: 19px 35px;
+
+    &:last-of-type h3 {
+      padding-top: 11px;
+    }
   }
 
   .product-card h3 {

@@ -6,7 +6,7 @@
   var closeModalBtn = callbackModal.querySelector('.modal-callback__close');
   var formCallback = callbackModal.querySelector('form');
   var anchorSelectors = ['.banner__button', '.banner__scroll-button'];
-  var footerItems = document.querySelectorAll(`.footer__navigation, .footer__contacts`);
+  var footerItems = document.querySelectorAll('.footer__navigation, .footer__contacts');
   var footerItemBtns = document.querySelectorAll('.footer__navigation-button, .footer__contacts-button');
   var phoneInputs = document.querySelectorAll('input[type="tel"]');
 
@@ -142,7 +142,7 @@
     footerItemBtns[i].addEventListener('click', showAndHideContentInFooter);
   }
 
-  setInitValueForFooterItems()
+  setInitValueForFooterItems();
   validationInputPhone(phoneInputs);
   smoothScroll(anchorSelectors);
 

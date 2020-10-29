@@ -9,10 +9,6 @@
   margin-right: auto;
 }
 
-.navigation__menu {
-  display: none;
-}
-
 .navigation__toggle {
   position: relative;
   width: 47px;
@@ -43,6 +39,12 @@
   }
 
   .navigation__contacts {
-    margin-left: 35px;
+    margin-left: 32px;
+  }
+}
+
+@media (max-width: $mobile_width) {
+  .navigation__contacts {
+    margin-left: 22px;
   }
 }
